@@ -1,0 +1,68 @@
+/* --- Hover Effects --- */
+
+.properties .item, 
+.best-deal .item, 
+.featured .item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.properties .item:hover, 
+.best-deal .item:hover, 
+.featured .item:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.orange-button a, 
+.orange-button button, 
+button[type="submit"] {
+  transition: all 0.3s ease !important;
+}
+
+.orange-button a:hover, 
+.orange-button button:hover, 
+button[type="submit"]:hover {
+  transform: scale(1.05) !important;
+  background-color: #f35525 !important;
+  opacity: 0.9 !important;
+}
+
+/* --- WhatsApp Float Button --- */
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 65px;
+  height: 65px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  animation: whatsapp-pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+  background-color: #128C7E;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 2px 8px 15px rgba(0,0,0,0.3);
+  color: white;
+  animation: none; /* Stop pulsing on hover */
+}
